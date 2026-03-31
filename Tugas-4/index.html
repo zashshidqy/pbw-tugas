@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 - Sistem Cek Nilai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Cek Nilai</h3>
+        <label>NIM:</label>
+        <br>
+        <input type="text" id="nim" placeholder="Masukkan NIM">
+        <br>
+        <label>Nilai (0-100):</label>
+        <br>
+        <input type="number" id="inputNilai" placeholder="Contoh: 85">
+        <br>
+        <button onclick="cekMutu()">Cek Nilai</button>
+
+        <div id="hasil"></div>
+    </div>
+
+    <script>
+        function cekMutu() {
+            let nim = document.getElementById('nim').value;
+            let nilai = document.getElementById('inputNilai').value;
+            let display = document.getElementById('hasil');
+
+            if (nim === "" || nilai === "") {
+                alert("Harap isi NIM dan Nilai!");
+                return;
+            }
+    
+            let hurufMutu = "";
+            if (nilai >= 80 && nilai <= 100) {
+                hurufMutu = "A";
+            } else if (nilai >= 70 && nilai < 80) {
+                hurufMutu = "B";
+            } else if (nilai >= 0 && nilai < 70) {
+                hurufMutu = "C";
+            } else {
+                alert("Nilai tidak valid! Masukkan angka 0-100.");
+                return;
+            }
+
+            display.innerHTML = "Mahasiswa NIM " + nim + "<br>Huruf Mutu: " + hurufMutu;
+        }
+    </script>
+</body>
+</html>
