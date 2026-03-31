@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 - Halaman Formulir</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Singaperbangsa</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a>Beranda</a></li>
+            <li><a>Tentang</a></li>
+            <li><a>Layanan</a></li>
+            <li><a>Kontak</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="content">
+        <h2>Formulir Pendaftaran</h2>
+        <p>Silahkan isi formulir dibawah ini untuk mendaftar.</p>
+        <form class="form">
+                <label for="username" id="user">Nama Lengkap</label>
+                <br>
+                <input class="form-isi" type="text" name="username" placeholder=" Masukkan nama pengguna">
+                <br>
+                <label  for="email">Email</label>
+                <br>
+                <input class="form-isi" type="text" name="email" placeholder=" Masukkan email">
+                <br>
+                <label  for="password">Password</label>
+                <br>
+                <input class="form-isi" type="text" name="password" placeholder=" Masukkan Password">
+                <br>
+                <label for="jenis-kelamin">Jenis Kelamin</label>
+                <br>
+                <input type="radio" name="jenis-kelamin">Laki-Laki
+                <br>
+                <input type="radio" name="jenis-kelamin">Perempuan
+                <br>
+                <label for="hobi">Hobi</label>
+                <br>
+                <input type="checkbox" value="musik">Musik
+                <br>
+                <input type="checkbox" value="olahraga">Olahraga
+                <br>
+                <input type="checkbox" value="Membaca">Membaca
+                <br>
+                <label for="kota">Pilih kota </label>
+                <br>
+                <select class="form-isi" name="kota" id="kota">
+                    <option value="karawang">Karawang</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="bali">Bali</option>
+                </select>
+                <br>
+                <label for="file">Pesan Tambahan :</label>
+                <br>
+                <input class="form-pesan" type="text" name="password" placeholder=" Masukkan Password">
+                <br>
+                <button class="btn-daftar" type="submit" class="btn">Daftar</button> 
+
+            </form>
+        </section>
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Bagian sidebar dapat berisi tautan, iklan atau informasi tambahan.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Halaman Web Singaperbangsa</p>
+    </footer>
+</body>
+</html>
