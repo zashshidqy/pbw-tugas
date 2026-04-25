@@ -1,0 +1,18 @@
+<?php
+include 'koneksi_db.php';
+
+$search_judul = isset($_GET['judul']) ? $_GET['judul'] : '';
+$search_tahun = isset($_GET['tahun_terbit']) ? $_GET['tahun_terbit'] : '';
+
+$query = "SELECT * FROM Buku WHERE 1=1";
+
+if (!empty($search_judul)) {
+    $query .= " AND Judul LIKE '%" . $conn->real_escape_string($search_judul) . "%'";
+}
+
+if (!empty($search_tahun)) {
+    $query .= " AND Tahun_Terbit = " . $conn->real_escape_string($search_tahun);
+}
+
+$result = $conn->query($query);
+?>
